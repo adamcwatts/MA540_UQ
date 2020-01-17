@@ -32,7 +32,7 @@ if __name__ == '__main__':
         # Plotting Scatter Plot
         fig, ax = plt.subplots(figsize=(10, 10))
         ax = sns.scatterplot(np.arange(1, n + 1, 1), heights, s=ms, hue=heights, legend='brief')
-        ax.set_title('Height vs. Student')
+        ax.set_title(f'Height vs. Student\nSamples Size = {n}')
         ax.set_xlabel('Student')
         ax.set_ylabel('Height [inches]')
         ax.axhline(y=mu, c='k', linewidth=3, label=r'$\mu = {{{}}}$'.format(mu))  # H-Line for mean
@@ -68,7 +68,7 @@ if __name__ == '__main__':
         (bin_values, _, _) = plt.hist(heights, bins=15, stacked=True, density=True,
                                       label='Normalized Histogram from Sample')
         # plot normalized histogram with 15 bins of sample distribution, returns the probability from those bins
-        plt.title('Distribution Comparisons')
+        plt.title(f'Distribution Comparisons\nSamples Size = {n}')
         plt.xlabel('Height [inches]')
         plt.axvline(x=mu, ymin=0, ymax=1, linestyle='--', alpha=0.25,
                     label=r'Population Mean: $\mu = {{{}}}$'.format(mu),
